@@ -1,0 +1,153 @@
+body{
+    animation: transitionIn 3s;   
+}
+
+@keyframes transitionIn{
+    from{opacity: 0;
+        transform: rotateX(-10deg)}
+
+    to{opacity: 1;
+    transform: rotateX(0);}
+}
+
+html, body{
+    color: white;
+    background-color: #0C3957;
+  	margin: 0 auto;
+  	padding: 0;
+  	height: 100%;
+  	width: 100%;
+  	overflow-x: hidden;
+  }
+
+  nav {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+  margin-left: 6px; 
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+  
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+
+  .news-container{
+    width: 100%;
+    overflow: hidden;
+  }
+  .news-wrap {
+    width: 100%;
+    padding-left: 100%;
+    background-color: black;
+  }
+  .news-move {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 30s;
+  }
+
+  @media only screen and (max-width: 768px) {
+  .ticker-move { animation-duration: 20s; }
+}
+  .news-move:hover{
+    animation-play-state: paused;
+  }
+  .news-item{
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 20px;
+    color: #39F816;
+    padding-right: 5px;
+ 
+}
+
+span{
+
+	border: 2px solid red;
+	padding: 2px 3px 2px 3px;
+	color:red;
+
+}
+ /*The main container*/
+
+h1{
+    font-size: 40px;
+    position: absolute;
+  	left: 10px;
+  	margin-top:2px;
+  	opacity: 0.8;
+    letter-spacing:1px; 	
+}
+
+.batcave-container{
+    width: 1000px;
+    height: 562px;
+    border: 5px black inset;
+    margin: 5px 0px 0px 5px;
+    position: relative;
+}
+
+.batcave-container #robin-hero{
+
+  animation: fadein 2s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 165px 10px; 
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
+.bat-logo{
+    position: absolute;  
+    top: 0;
+    left: 0;
+    margin: 250px 0px 0px 400px;
+    transition: transform .2s;
+    animation: fadein 5s;
+}
+.bat-logo:hover{
+    transform: scale(1.5);
+}
+
+@keyframes fadein{
+    from{opacity: 0;}
+    to  {opacity: 1;}
+}
+.batcave-container .bubble{
+  position: absolute;
+  top: 0;
+  right: 0; 
+  margin: 50px 370px;
+  animation: 3s ease 0s normal forwards  easein;
+  
+}
+
+@keyframes easein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.text{
+      position: absolute;
+      letter-spacing: 1px;
+      font-size: 14px;
+      background-color: #3E1518;
+      height: 60px;
+      width:210px;
+      padding: 10px 15px 5px 15px;
+      border-radius: 25px;
+      cursor: pointer; 
+}
